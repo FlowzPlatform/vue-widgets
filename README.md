@@ -1,88 +1,108 @@
-# Project Title
+<p align="center">
+    <a href="https://www.iviewui.com">
+        <img width="200" src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
+    </a>
+</p>
 
-One Paragraph of project description goes here
+# iView 
+[![](https://img.shields.io/travis/iview/iview.svg?style=flat-square)](https://travis-ci.org/iview/iview) 
+[![iView](https://img.shields.io/npm/v/iview.svg?style=flat-square)](https://www.npmjs.org/package/iview)
+[![NPM downloads](http://img.shields.io/npm/dm/iview.svg?style=flat-square)](https://npmjs.org/package/iview)
+[![NPM downloads](https://img.shields.io/npm/dt/iview.svg?style=flat-square)](https://npmjs.org/package/iview)
+![JS gzip size](http://img.badgesize.io/https://unpkg.com/iview/dist/iview.min.js?compression=gzip&label=gzip%20size:%20JS&style=flat-square)
+![CSS gzip size](http://img.badgesize.io/https://unpkg.com/iview/dist/styles/iview.css?compression=gzip&label=gzip%20size:%20CSS&style=flat-square)
+[![Join the chat at https://gitter.im/iview/iview](https://img.shields.io/badge/chat-on_gitter-30b392.svg?style=flat-square)](https://gitter.im/iview/iview?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Getting Started
+### A high quality  UI Toolkit built on Vue.js.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+> This branch is for Vue.js 2.x
+>
+> [HERE](https://github.com/iview/iview/tree/master) is for Vue.js 1.x
 
-### Prerequisites
+## Docs
 
-What things you need to install the software and how to install them
+### [English (2.0)](https://www.iviewui.com)
+### [中文文档 (2.0)](https://www.iviewui.com)
+### [中文文档 (1.0)](http://v1.iviewui.com)
 
+## Overview
+
+### [组件概览（Component Overview）](https://www.iviewui.com/overview)
+
+## Features
+
+- High quality and rich functions
+- Friendly APIs,free and flexible
+- Great Documentation
+- It is quite beautiful
+- Support Vue.js 2 and Vue.js 1
+- Based on npm + webpack + babel, using ES2015
+
+## Programming
+![iView](https://raw.githubusercontent.com/iview/iview/2.0/assets/iview2.png)
+
+## Install
+
+### Install vue-webpack project in the first place
+
+Use [iview-project](https://github.com/iview/iview-project)(Recommended) Or [vue-cli](https://github.com/vuejs/vue-cli)
+
+### Install iView
+
+using npm
 ```
-Give examples
+npm install iview --save
+```
+Or using script tag for global use
+```html
+<script type="text/javascript" src="iview.min.js"></script>
 ```
 
-### Installing
+## Usage
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+```html
+<template>
+    <Slider v-model="value" range></Slider>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value: [20, 50]
+            }
+        }
+    }
+</script>
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+Use css
+```js
+import 'iview/dist/styles/iview.css';
 ```
 
-### And coding style tests
+## Browser Support
 
-Explain what these tests test and why
+Normal browsers and Internet Explorer 9+.
 
-```
-Give an example
-```
+## Major Contributors
+|Name   |Avatar   |
+|---|---|
+|  [Aresn](https://github.com/icarusion) |  ![](https://avatars3.githubusercontent.com/u/5370542?v=3&s=60)  |
+|  [jingsam](https://github.com/jingsam) |  ![](https://avatars3.githubusercontent.com/u/1522494?v=3&s=60)  |  
+|  [rijn](https://github.com/rijn)       |  ![](https://avatars2.githubusercontent.com/u/6976367?v=3&s=60)  |
+|  [lcx960324](https://github.com/lcx960324)       |  ![](https://avatars3.githubusercontent.com/u/9768245?v=3&s=60)  |
+|  [GITleonine1989](https://github.com/GITleonine1989) |  ![](https://avatars1.githubusercontent.com/u/7582490?v=3&s=60)  |
+|  [huixisheng](https://github.com/huixisheng) |  ![](https://avatars1.githubusercontent.com/u/1518967?v=3&s=60)  |
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+## Links
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+- [TalkingData](https://github.com/TalkingData)
+- [Vue](https://github.com/vuejs/vue)
+- [Webpack](https://github.com/webpack/webpack)
+- [ionicons](https://github.com/driftyco/ionicons)
+- [Ant Design](https://github.com/ant-design/ant-design)
 
 ## License
+[MIT](http://opensource.org/licenses/MIT)
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
+Copyright (c) 2016-present, iView
