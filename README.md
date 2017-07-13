@@ -1,108 +1,50 @@
-<p align="center">
-    <a href="https://www.iviewui.com">
-        <img width="200" src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
-    </a>
-</p>
+# Vue-Widgets
 
-# iView 
-[![](https://img.shields.io/travis/iview/iview.svg?style=flat-square)](https://travis-ci.org/iview/iview) 
-[![iView](https://img.shields.io/npm/v/iview.svg?style=flat-square)](https://www.npmjs.org/package/iview)
-[![NPM downloads](http://img.shields.io/npm/dm/iview.svg?style=flat-square)](https://npmjs.org/package/iview)
-[![NPM downloads](https://img.shields.io/npm/dt/iview.svg?style=flat-square)](https://npmjs.org/package/iview)
-![JS gzip size](http://img.badgesize.io/https://unpkg.com/iview/dist/iview.min.js?compression=gzip&label=gzip%20size:%20JS&style=flat-square)
-![CSS gzip size](http://img.badgesize.io/https://unpkg.com/iview/dist/styles/iview.css?compression=gzip&label=gzip%20size:%20CSS&style=flat-square)
-[![Join the chat at https://gitter.im/iview/iview](https://img.shields.io/badge/chat-on_gitter-30b392.svg?style=flat-square)](https://gitter.im/iview/iview?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+The vue-widgets provides customized vue component. this component can hold content like charts, text, images etc. this component have properties like collapse, fullscreen and close. user can customize component header and it's background color and component will maintain states using localstorage. user can easily add or remove built-in features like collapse, fullscreen, close, set color etc.
 
-### A high quality  UI Toolkit built on Vue.js.
-
-> This branch is for Vue.js 2.x
->
-> [HERE](https://github.com/iview/iview/tree/master) is for Vue.js 1.x
-
-## Docs
-
-### [English (2.0)](https://www.iviewui.com)
-### [中文文档 (2.0)](https://www.iviewui.com)
-### [中文文档 (1.0)](http://v1.iviewui.com)
-
-## Overview
-
-### [组件概览（Component Overview）](https://www.iviewui.com/overview)
-
-## Features
-
-- High quality and rich functions
-- Friendly APIs,free and flexible
-- Great Documentation
-- It is quite beautiful
-- Support Vue.js 2 and Vue.js 1
-- Based on npm + webpack + babel, using ES2015
-
-## Programming
-![iView](https://raw.githubusercontent.com/iview/iview/2.0/assets/iview2.png)
-
-## Install
-
-### Install vue-webpack project in the first place
-
-Use [iview-project](https://github.com/iview/iview-project)(Recommended) Or [vue-cli](https://github.com/vuejs/vue-cli)
-
-### Install iView
-
-using npm
+## Installing
 ```
-npm install iview --save
+npm install vue-widgets -S
 ```
-Or using script tag for global use
-```html
-<script type="text/javascript" src="iview.min.js"></script>
+## Getting Started
+
+```javascript
+import Vue from 'vue'
+import VueWidgets from 'vue-widgets'
+import 'vue-widgets/dist/styles/vue-widgets.css'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+
+Vue.use(VueWidgets)
+Vue.component('Icon', Icon)
 ```
 
 ## Usage
-
-```html
-<template>
-    <Slider v-model="value" range></Slider>
-</template>
-<script>
-    export default {
-        data () {
-            return {
-                value: [20, 50]
-            }
-        }
-    }
-</script>
+```javascript
+<Widget>
+    <WidgetHeading :id="1" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true"></WidgetHeading>
+    <WidgetBody>
+        body content
+    </WidgetBody>
+</Widget>
 ```
-Use css
-```js
-import 'iview/dist/styles/iview.css';
-```
+### Prerequisites
 
-## Browser Support
+`Node.js 4+` `NPM 3+` and `Vue Js 2.0+` are required.
 
-Normal browsers and Internet Explorer 9+.
+## Built With
 
-## Major Contributors
-|Name   |Avatar   |
-|---|---|
-|  [Aresn](https://github.com/icarusion) |  ![](https://avatars3.githubusercontent.com/u/5370542?v=3&s=60)  |
-|  [jingsam](https://github.com/jingsam) |  ![](https://avatars3.githubusercontent.com/u/1522494?v=3&s=60)  |  
-|  [rijn](https://github.com/rijn)       |  ![](https://avatars2.githubusercontent.com/u/6976367?v=3&s=60)  |
-|  [lcx960324](https://github.com/lcx960324)       |  ![](https://avatars3.githubusercontent.com/u/9768245?v=3&s=60)  |
-|  [GITleonine1989](https://github.com/GITleonine1989) |  ![](https://avatars1.githubusercontent.com/u/7582490?v=3&s=60)  |
-|  [huixisheng](https://github.com/huixisheng) |  ![](https://avatars1.githubusercontent.com/u/1518967?v=3&s=60)  |
+* [Webpack](https://webpack.js.org/) - The web framework used
+* [gulp](http://gulpjs.com/) - Automated development toolkit
 
+## Contributing
 
-## Links
-
-- [TalkingData](https://github.com/TalkingData)
-- [Vue](https://github.com/vuejs/vue)
-- [Webpack](https://github.com/webpack/webpack)
-- [ionicons](https://github.com/driftyco/ionicons)
-- [Ant Design](https://github.com/ant-design/ant-design)
+If you find a bug or want to contribute to the code or documentation, you can help by submitting an [issue](https://github.com/FlowzPlatform/vue-widgets/issues) or a [pull request](https://github.com/FlowzPlatform/vue-widgets/pulls)
 
 ## License
-[MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, iView
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+vue-widgets icons is brought to you by [vue-awesome](https://github.com/Justineo/vue-awesome)
+
