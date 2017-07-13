@@ -1,0 +1,95 @@
+@widget-prefix-cls: ~"@{css-prefix}widget";
+
+/*dropdown color box starts*/
+/*dropdown color box ends*/
+/* Edit Heading starts*/
+.@{widget-prefix-cls}{
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+	&-body-true{
+		> .vw-widget-body{
+			display: block;
+		}
+	}
+	&-body-false{
+		> .vw-widget-body{
+			display: none;
+		}
+	}
+	&-fullscreen-true {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 99;
+		left: 0;
+    }
+	&-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color: #333;
+        background-color: #f5f5f5;
+        border-color: #ddd;
+    }
+
+	&-options a{
+        border:1px solid transparent;
+        background: transparent;
+        padding:4px 8px;
+        border-radius:25px;
+        text-decoration:none;
+        cursor: pointer 
+    }
+	&-heading span{
+        cursor: pointer;
+    }
+	&-color {
+        cursor: pointer;
+        position:relative;
+		> i{
+			position: absolute;
+			top: 2px;
+		}
+		> input{
+			opacity: 0;
+			padding: 0px;
+			margin-top: -4px;
+			width: 16px;    
+			height: 22px; 
+		}
+    }
+	&-body{
+        padding:15px;
+    }
+	&-color {
+        cursor: pointer;
+        position:relative;
+		> svg{
+			position: absolute;
+			top: 2px;
+		}
+		> input{
+			opacity: 0;
+			padding: 0px;
+			margin-top: -4px;
+			width: 16px;    
+			height: 22px; 
+		}
+    }
+	&-txt {
+		color: #333;
+		background: transparent;
+		border: 1px solid #333;
+		border-radius: 4px;
+		outline: none!important;
+		font-size: 15px;
+	}
+}
