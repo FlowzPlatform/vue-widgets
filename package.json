@@ -1,6 +1,6 @@
 {
-  "name": "rbajaniya-widgets",
-  "version": "1.0.0",
+  "name": "vue-widgets",
+  "version": "1.0.4",
   "description": "Vue.js widget component",
   "main": "dist/vue-widgets.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "keywords": [
     "widget"
   ],
-  "author": "rohitbajaniya <rbajaniya@officebrain.com>",
+  "author": "FlowzPlatform",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FlowzPlatform/vue-widgets/issues"
