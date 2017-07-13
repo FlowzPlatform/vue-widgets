@@ -43,7 +43,7 @@ If you find a bug or want to contribute to the code or documentation, you can he
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/FlowzPlatform/vue-widgets/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 vue-widgets icons is brought to you by [vue-awesome](https://github.com/Justineo/vue-awesome)
