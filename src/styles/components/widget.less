@@ -39,7 +39,6 @@
         background-color: #f5f5f5;
         border-color: #ddd;
     }
-
 	&-options a{
         border:1px solid transparent;
         background: transparent;
@@ -47,42 +46,22 @@
         border-radius:25px;
         text-decoration:none;
         cursor: pointer 
-    }
+	}
+	&-options a input{
+		cursor: pointer;        
+    	opacity: 0;
+    	padding: 0; 
+    	width: 15px;
+    	height: 22px
+	}
+	&-options a #svg{
+    	position: absolute;
+	}
 	&-heading span{
         cursor: pointer;
     }
-	&-color {
-        cursor: pointer;
-        position:relative;
-		> i{
-			position: absolute;
-			top: 2px;
-		}
-		> input{
-			opacity: 0;
-			padding: 0px;
-			margin-top: -4px;
-			width: 16px;    
-			height: 22px; 
-		}
-    }
 	&-body{
         padding:15px;
-    }
-	&-color {
-        cursor: pointer;
-        position:relative;
-		> svg{
-			position: absolute;
-			top: 2px;
-		}
-		> input{
-			opacity: 0;
-			padding: 0px;
-			margin-top: -4px;
-			width: 16px;    
-			height: 22px; 
-		}
     }
 	&-txt {
 		color: #333;
