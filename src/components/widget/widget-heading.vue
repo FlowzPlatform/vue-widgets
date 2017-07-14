@@ -1,63 +1,66 @@
 <template>
   <div class="vw-widget-heading" v-bind:style="styles">
-        <Icon name="comments"></Icon>
         <span v-if="headerShow" v-on:mouseover="changeHeader()" title="Edit">
             <slot>{{Titles}}</slot>
         </span>
 
         <div v-if="DeleteButton" class="vw-widget-options vw-pull-right">
-          <a @click="close" title="Close Widget"><Icon name="times"></Icon></a>
+          <a v-bind:style="textClass" @click="close" title="Close Widget"><Icon name="times"></Icon></a>
         </div>
 
-        <!-- Expand Component starts -->
+        <!-- Expand Component -->
         <div v-if="Expand" class="vw-widget-options vw-pull-right">
-          <a @click="fullscreen" title="Fullscreen">
+          <a v-bind:style="textClass" @click="fullscreen" title="Fullscreen">
             <Icon v-if="!Fullscreen" name="expand"></Icon>
             <Icon v-else name="compress"></Icon>
           </a>
         </div>
-        <!-- Expand Component ends-->
+        <!-- /Expand Component -->
 
-        <!-- Collaps Component starts -->
+        <!-- Collaps Component -->
         <div v-if="Collapse" class="vw-widget-options vw-pull-right">
-          <a @click="minimizebody" title="Collapse">
+          <a v-bind:style="textClass" @click="minimizebody" title="Collapse">
             <Icon v-if="Minimize" name="minus"></Icon>
             <Icon v-else name="plus"></Icon>
           </a>
         </div>
-        <!-- Collaps Component ends -->
+        <!-- /Collaps Component -->
 
-        <div v-if="ColorBox" class="vw-widget-options vw-pull-right">
-          <div class="vw-widget-color">
-            <Icon name="paint-brush"></Icon>
-            <input  type="color" v-model="Headcolor" value="#00dcff" v-on:change="setColor()" title="Window Color" >
-          </div>
-         <!--  <i class="material-icons" v-on:click="colorSet()">format_color_fill</i> -->
-        </div>
-        <!-- Color-Box Component ends -->
-
-         <!-- Heading Edit Component starts -->
-        <span v-if="editHeading">
-          <input v-model="Titles" type="text" name="txtTitle" class="vw-widget-txt" v-on:keyup.enter="validate()" @mouseleave="changeHeader()" v-bind:style="textClass">
-        </span>
-        <!-- Heading Edit Component ends -->
-
-         <!-- Reset Component -->         
+        <!-- Reset Component -->         
         <div v-if="Reset" class="vw-widget-options vw-pull-right">           
-            <a v-on:click="removeState()" title="Reset Component">
+            <a v-bind:style="textClass" v-on:click="removeState()" title="Reset Component">
                 <Icon name="undo"></Icon>
             </a>         
         </div>         
-        <!-- Reset Component ends -->
+        <!-- /Reset Component-->
+
+        <!-- Color-Box Component -->
+        <div v-if="ColorBox" class="vw-widget-options vw-pull-right">
+          <!-- <div class="vw-widget-color"> -->
+          <a v-bind:style="textClass">
+            <Icon id="svg" name="paint-brush"></Icon>
+            <input type="color" v-model="Headcolor" value="#00dcff" v-on:change="setColor()" title="Change Color">
+          </a>
+         <!-- </div> -->                  
+        </div>
+        <!-- /Color-Box Component -->
+
+         <!-- Heading Edit Component -->
+        <span v-if="editHeading">
+          <input v-model="Titles" type="text" name="txtTitle" class="vw-widget-txt" v-on:keyup.enter="validate()" @mouseleave="validate()" v-bind:style="txtBoxClass">
+        </span>
+        <!-- /Heading Edit Component -->
 
          <!-- Text Color -->         
          <div v-if="TextColor" class="vw-widget-options vw-pull-right">           
-            <div class="vw-widget-color">             
-                <Icon name="font"></Icon>
-                <input type="color" v-model="Textcolor" v-on:change="setTextColor()" title="Font Color">           
-            </div>         
+            <!-- <div class="vw-widget-color"> -->      
+            <a v-bind:style="textClass">       
+                <Icon id="svg" name="font"></Icon>
+                <input type="color" v-model="Textcolor" v-on:change="setTextColor()" title="Font Color">    
+            </a>       
+            <!-- </div> -->         
         </div>         
-        <!-- Text Color Ends -->
+        <!-- /Text Color -->
   </div>
 </template>
 
@@ -118,11 +121,16 @@
           'color': this.Textcolor
         };
       },
-      textClass() {         
+      txtBoxClass() {         
           return {           
               'color': this.Textcolor,           
               'border-color': this.Textcolor         
           }       
+      },
+      textClass() {         
+          return {
+               'color': this.Textcolor
+          }
       }
     },
 
