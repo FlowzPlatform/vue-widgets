@@ -4,44 +4,44 @@
             <slot>{{Titles}}</slot>
         </span>
 
-        <div v-if="DeleteButton" class="vw-widget-options vw-pull-right">
-          <a v-bind:style="textClass" @click="close" title="Close Widget"><Icon name="times"></Icon></a>
+        <div v-if="DeleteButton" class="vw-widget-options pull-right">
+          <a v-bind:style="textClass" @click="close" title="Close Widget">
+            <i class="fa fa-times"></i>
+          </a>
         </div>
 
         <!-- Expand Component -->
-        <div v-if="Expand" class="vw-widget-options vw-pull-right">
+        <div v-if="Expand" class="vw-widget-options pull-right">
           <a v-bind:style="textClass" @click="fullscreen" title="Fullscreen">
-            <Icon v-if="!Fullscreen" name="expand"></Icon>
-            <Icon v-else name="compress"></Icon>
+            <i v-if="!Fullscreen" class="fa fa-expand"></i>
+            <i v-else class="fa fa-compress"></i>
           </a>
         </div>
         <!-- /Expand Component -->
 
         <!-- Collaps Component -->
-        <div v-if="Collapse" class="vw-widget-options vw-pull-right">
+        <div v-if="Collapse" class="vw-widget-options pull-right">
           <a v-bind:style="textClass" @click="minimizebody" title="Collapse">
-            <Icon v-if="Minimize" name="minus"></Icon>
-            <Icon v-else name="plus"></Icon>
+            <i v-if="!Minimize" class="fa fa-plus"></i>
+            <i v-else class="fa fa-minus"></i>
           </a>
         </div>
         <!-- /Collaps Component -->
 
         <!-- Reset Component -->         
-        <div v-if="Reset" class="vw-widget-options vw-pull-right">           
+        <div v-if="Reset" class="vw-widget-options pull-right">           
             <a v-bind:style="textClass" v-on:click="removeState()" title="Reset Component">
-                <Icon name="undo"></Icon>
+                <i class="fa fa-undo"></i>
             </a>         
         </div>         
         <!-- /Reset Component-->
 
         <!-- Color-Box Component -->
-        <div v-if="ColorBox" class="vw-widget-options vw-pull-right">
-          <!-- <div class="vw-widget-color"> -->
+        <div v-if="ColorBox" class="vw-widget-options pull-right">
           <a v-bind:style="textClass">
-            <Icon id="svg" name="paint-brush"></Icon>
-            <input type="color" v-model="Headcolor" value="#00dcff" v-on:change="setColor()" title="Change Color">
+            <i id="svg" class="fa fa-th-large"></i>
+            <input class="text-color" type="color" v-model="Headcolor" value="#00dcff" v-on:change="setColor()" title="Change Color" style="border-color">
           </a>
-         <!-- </div> -->                  
         </div>
         <!-- /Color-Box Component -->
 
@@ -52,13 +52,11 @@
         <!-- /Heading Edit Component -->
 
          <!-- Text Color -->         
-         <div v-if="TextColor" class="vw-widget-options vw-pull-right">           
-            <!-- <div class="vw-widget-color"> -->      
+         <div v-if="TextColor" class="vw-widget-options pull-right">           
             <a v-bind:style="textClass">       
-                <Icon id="svg" name="font"></Icon>
-                <input type="color" v-model="Textcolor" v-on:change="setTextColor()" title="Font Color">    
+                <i id="svg" class="fa fa-paint-brush"></i>
+                <input class="text-color" type="color" v-model="Textcolor" v-on:change="setTextColor()" title="Font Color">    
             </a>       
-            <!-- </div> -->         
         </div>         
         <!-- /Text Color -->
   </div>
