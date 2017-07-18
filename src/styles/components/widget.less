@@ -38,28 +38,36 @@
         color: #333;
         background-color: #f5f5f5;
         border-color: #ddd;
+		span{
+			cursor: pointer;
+		}
     }
-	&-options a{
-        border:1px solid transparent;
-        background: transparent;
-        padding:4px 8px;
-        border-radius:25px;
-        text-decoration:none;
-        cursor: pointer 
+	&-options{ 
+		a{
+			border:1px solid transparent;
+			background: transparent;
+			padding:4px 8px;
+			border-radius:25px;
+			text-decoration:none;
+			cursor: pointer;
+			input[type="color"]{
+				cursor: pointer;
+				padding: 0px;
+				width: 17px;
+				height: 23px;
+				border-width: 0;
+				height: 20px;
+				background-color: transparent;
+				
+			}
+			input.text-color{
+				opacity: 0;
+			}
+			#svg{
+				position: absolute;
+			}
+		}
 	}
-	&-options a input{
-		cursor: pointer;        
-    	opacity: 0;
-    	padding: 0; 
-    	width: 15px;
-    	height: 22px
-	}
-	&-options a #svg{
-    	position: absolute;
-	}
-	&-heading span{
-        cursor: pointer;
-    }
 	&-body{
         padding:15px;
     }

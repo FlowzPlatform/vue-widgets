@@ -12,11 +12,8 @@ npm install vue-widgets -S
 import Vue from 'vue'
 import VueWidgets from 'vue-widgets'
 import 'vue-widgets/dist/styles/vue-widgets.css'
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
 
 Vue.use(VueWidgets)
-Vue.component('Icon', Icon)
 ```
 
 ## Usage
@@ -28,9 +25,22 @@ Vue.component('Icon', Icon)
     </WidgetBody>
 </Widget>
 ```
-### Prerequisites
+## Prerequisites
 
 `Node.js 4+` `NPM 3+` and `Vue Js 2.0+` are required.
+
+## Development
+
+Install all required dependencies:
+
+```
+npm install
+
+// Build and run the project
+npm run dev
+```
+Go to localhost:8081 to inspect the example in your Browser.
+
 
 ## Built With
 
@@ -46,5 +56,4 @@ If you find a bug or want to contribute to the code or documentation, you can he
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/FlowzPlatform/vue-widgets/blob/master/LICENSE) file for details
 
 ## Acknowledgments
-vue-widgets icons is brought to you by [vue-awesome](https://github.com/Justineo/vue-awesome)
-
+vue-widgets icons is brought to you by [fontawesome](http://fontawesome.io/)
