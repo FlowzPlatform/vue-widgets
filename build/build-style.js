@@ -18,7 +18,7 @@ gulp.task('css', function () {
 
 // Copy the font file
 gulp.task('fonts', function () {
-  gulp.src('../src/styles/common/iconfont/fonts/*.*')
+  gulp.src('../src/styles/common/font-awesome-4.7/fonts/*.*')
     .pipe(gulp.dest('../dist/styles/fonts'));
 });
 
