@@ -1,10 +1,11 @@
 {
   "name": "vue-widgets",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Vue.js widget component",
   "main": "dist/vue-widgets.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8081 --config build/webpack.dev.config.js",
+    "build:example": "webpack --config build/webpack.dev.config.js",
     "build:style": "gulp --gulpfile build/build-style.js",
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
     "build:prod": "webpack --config build/webpack.dist.prod.config.js",
