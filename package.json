@@ -20,7 +20,9 @@
     "url": "git+https://github.com/FlowzPlatform/vue-widgets.git"
   },
   "keywords": [
-    "widget"
+    "widget",
+    "vue-widget",
+    "vue-widgets"
   ],
   "author": "FlowzPlatform",
   "license": "MIT",
