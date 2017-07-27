@@ -1,6 +1,9 @@
 # Vue-Widgets
 
-The vue-widgets provides customized vue component. this component can hold content like charts, text, images etc. this component have properties like collapse, fullscreen and close. user can customize component header and it's background color and component will maintain states using localstorage. user can easily add or remove built-in features like collapse, fullscreen, close, set color etc.
+The vue-widgets provide customized vue component for displaying content with headers (similar to bootstrap panel), which is useful for building dashboards quickly. This component can hold any content you provide, such as charts, text, images etc. using the vue slots mechanism. This component allows header customization, with properties such as collapse, fullscreen and close. User can customize the header and it's background color and  the component will remember its state using localstorage. User can easily enable or disable any of the built-in features (collapse, fullscreen, close, set color etc.) using the component options.
+
+## Live Example 
+[http://162.242.223.167:9000/](http://162.242.223.167:9000/)
 
 ## Installing
 ```
@@ -17,7 +20,7 @@ Vue.use(VueWidgets)
 ```
 
 ## Usage
-```javascript
+```html
 <Widget>
     <WidgetHeading :id="1" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true"></WidgetHeading>
     <WidgetBody>
