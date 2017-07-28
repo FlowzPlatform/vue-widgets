@@ -31,22 +31,19 @@
     },
     methods: {
       handleCloseClick(self) {
-        this.visible = false
-        console.log('self')
+        this.visible = self
       },
       handleMinimizeBody(self) {
-        this.Minimizebody = !this.Minimizebody
+        this.Minimizebody = self
       },
       handleFullscreen(self) {
-        this.Fullscreen = !this.Fullscreen
+        this.Fullscreen = self
       }
     },
-    mounted() {
-        // this.theme = localStorage.getItem('color'+this.id)
-        // To Store Color Value of :ColorBox='true' feature uncomment above aline
-        this.$on('close-click', this.handleCloseClick);
-        this.$on('minimize-body', this.handleMinimizeBody);
-        this.$on('fullscreen', this.handleFullscreen);  
+    created() {
+      this.$on('close-click', this.handleCloseClick);
+      this.$on('minimize-body', this.handleMinimizeBody);
+      this.$on('fullscreen', this.handleFullscreen);  
     }
   };
 </script>

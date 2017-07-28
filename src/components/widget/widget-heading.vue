@@ -97,18 +97,28 @@
       },
       id: {
         type: Number
+      },
+      isMinimize: {
+        type: Boolean,         
+        default: false  
+      },
+      Hcolor: {
+        type: String
+      },
+      Tcolor:{
+        type: String
       }
     },
     data() {
       return {
         headerShow: true,
         editHeading: false,
-        Headcolor: '#f5f5f5',
+        Headcolor: this.Hcolor,
         color: '',
         Minimize: true,
         Fullscreen: false,
         Titles: this.Title,
-        Textcolor: '#333',
+        Textcolor: this.Tcolor,
         OldHeader: ''
       }
     },
@@ -135,19 +145,20 @@
     methods: {
       minimizebody(){
         this.Minimize = !this.Minimize
-        this.dispatch('Widget', 'minimize-body', this)
+        localStorage.setItem('Minimize' + this.id,this.Minimize )
+        this.dispatch('Widget', 'minimize-body', this.Minimize)
       },
       fullscreen(){
         this.Fullscreen = !this.Fullscreen
-        this.dispatch('Widget', 'fullscreen', this)
+        this.dispatch('Widget', 'fullscreen', this.Fullscreen)
       },
       removeState() {
         localStorage.removeItem('Headcolor' + this.id)         
         localStorage.removeItem('Textcolor' + this.id)         
         localStorage.removeItem('title' + this.id)
         this.Titles = this.OldHeader
-        this.Headcolor = "#f5f5f5"
-        this.Textcolor = "#333"
+        this.Headcolor = this.Hcolor
+        this.Textcolor = this.Tcolor
         //location.reload()
       },
       validate() {
@@ -164,7 +175,7 @@
         localStorage.setItem('title' + this.id, this.Titles)
       },
       close() {
-        this.dispatch('Widget', 'close-click', this);
+        this.dispatch('Widget', 'close-click', false);
       },
       setColor() {
         // This Function is used for :ColorBoxNew Feature
@@ -174,18 +185,22 @@
         localStorage.setItem('Textcolor'+this.id, this.Textcolor)       
       }
     },
-    mounted() {
-        this.OldHeader = this.Titles;
-        if(localStorage.length > 0 && localStorage.getItem('title' + this.id) != null){
-            this.Titles = localStorage.getItem('title' + this.id)
-            this.Headcolor = localStorage.getItem('Headcolor' + this.id)
-            this.Textcolor = localStorage.getItem('Textcolor' + this.id)
-        }else{
-            localStorage.setItem('title' + this.id,this.Titles )
-            localStorage.setItem('Headcolor' + this.id,this.Headcolor )
-            localStorage.setItem('Textcolor' + this.id,this.Textcolor )
-        }
-      //localStorage.clear();
+    created() {
+      this.OldHeader = this.Titles;
+      if(localStorage.length > 0 && localStorage.getItem('title' + this.id) != null){
+          this.Titles = localStorage.getItem('title' + this.id)
+          this.Headcolor = localStorage.getItem('Headcolor' + this.id)
+          this.Textcolor = localStorage.getItem('Textcolor' + this.id)
+          this.Minimize =(localStorage.getItem('Minimize' + this.id) === 'true')?true:false
+          this.dispatch('Widget', 'minimize-body',this.Minimize)
+      }else{
+          this.Minimize = !this.isMinimize
+          this.dispatch('Widget', 'minimize-body',this.Minimize)
+          localStorage.setItem('title' + this.id,this.Titles )
+          localStorage.setItem('Headcolor' + this.id,this.Headcolor )
+          localStorage.setItem('Textcolor' + this.id,this.Textcolor )
+          localStorage.setItem('Minimize' + this.id,this.Minimize )
+      }
     }
   };
 </script>
