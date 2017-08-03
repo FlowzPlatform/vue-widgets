@@ -1,7 +1,7 @@
 <template>
 <div>
     <Widget>
-        <WidgetHeading :Hcolor="'#ff0000'" :Tcolor="'#00ff00'" :isMinimize="true" :Reset="true" :id="1" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true"></WidgetHeading>
+        <WidgetHeading :Hcolor="'#ff0000'" :Tcolor="'#00ff00'" :isMinimize="true" :Reset="true" :id="1" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true" :HeadingEditable="true"></WidgetHeading>
         <WidgetBody>
             body content
         </WidgetBody>
