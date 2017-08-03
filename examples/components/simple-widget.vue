@@ -8,7 +8,7 @@
     </Widget>
 
     <Widget>
-        <WidgetHeading :Reset="true" :id="2" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true"></WidgetHeading>
+        <WidgetHeading :Reset="true" :id="2" :Title="'Heading'" :TextColor="true" :DeleteButton="true" :ColorBox="true" :Expand="true" :Collapse="true" :HeaderEditable="false"></WidgetHeading>
         <WidgetBody>
             body content
         </WidgetBody>

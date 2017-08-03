@@ -107,6 +107,10 @@
       },
       Tcolor:{
         type: String
+      },
+       HeaderEditable: {
+        type: Boolean,         
+        default: true       
       }
     },
     data() {
@@ -170,9 +174,11 @@
         }
       },
       changeHeader() {
-        this.headerShow = !this.headerShow
-        this.editHeading = !this.editHeading
-        localStorage.setItem('title' + this.id, this.Titles)
+        if(this.HeaderEditable){
+          this.headerShow = !this.headerShow
+          this.editHeading = !this.editHeading
+          localStorage.setItem('title' + this.id, this.Titles)
+        }
       },
       close() {
         this.dispatch('Widget', 'close-click', false);
