@@ -4,7 +4,7 @@
   "description": "Vue.js widget component",
   "main": "dist/vue-widgets.js",
   "scripts": {
-    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8081 --config build/webpack.dev.config.js",
+    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 2200 --config build/webpack.dev.config.js",
     "build:example": "webpack --config build/webpack.dev.config.js",
     "build:style": "gulp --gulpfile build/build-style.js",
     "build:dev": "webpack --config build/webpack.dist.dev.config.js",
@@ -88,5 +88,8 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "vuedraggable": "^2.15.0"
   }
 }
